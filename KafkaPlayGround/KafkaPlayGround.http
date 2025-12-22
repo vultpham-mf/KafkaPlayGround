@@ -1,0 +1,6 @@
+@KafkaPlayGround_HostAddress = http://localhost:5098
+
+GET {{KafkaPlayGround_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
