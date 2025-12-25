@@ -1,0 +1,6 @@
+@_6.DeeplyResearchIProducer_HostAddress = http://localhost:5055
+
+GET {{_6.DeeplyResearchIProducer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
