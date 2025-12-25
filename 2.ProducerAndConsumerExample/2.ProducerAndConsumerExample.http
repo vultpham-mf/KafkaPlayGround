@@ -1,0 +1,6 @@
+@_2.ProducerAndConsumerExample_HostAddress = http://localhost:5223
+
+GET {{_2.ProducerAndConsumerExample_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
