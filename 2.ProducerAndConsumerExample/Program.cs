@@ -1,3 +1,4 @@
+using _2.ProducerAndConsumerExample.Consumers;
 using _2.ProducerAndConsumerExample.Producers;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 
 builder.Services.AddProducer();
+builder.Services.AddConsumer();
 
 var app = builder.Build();
 

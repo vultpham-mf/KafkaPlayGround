@@ -8,9 +8,9 @@ public class Consumer(ILogger<Consumer> logger) : BackgroundService
 
     public static ConsumerConfig Config = new()
     {
-        BootstrapServers = "pkc-817wq.ap-east-1.aws.confluent.cloud:9092",
-        SaslUsername = "L2CQNGJNDECU6MTP",
-        SaslPassword = "cfltqqBP8QxwZnG00rxojej22eY3nvWuEwRjJmhEXjx+p0YrxNsE9eb6GyKpnLBA",
+        BootstrapServers = "",
+        SaslUsername = "",
+        SaslPassword = "",
         
         SecurityProtocol = SecurityProtocol.SaslSsl,
         SaslMechanism = SaslMechanism.Plain,
