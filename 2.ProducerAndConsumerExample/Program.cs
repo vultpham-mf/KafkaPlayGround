@@ -1,4 +1,4 @@
-using _2.ProducerAndConsumerExample.BasicExample;
+using _2.ProducerAndConsumerExample.Producers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
-builder.Services.AddHostedService<Consumer>();
+builder.Services.AddProducer();
 
 var app = builder.Build();
 
@@ -18,6 +18,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapProducerApi();
+TriggerProducerApi.Map(app);
 
 app.Run();
