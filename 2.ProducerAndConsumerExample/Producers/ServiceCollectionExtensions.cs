@@ -22,8 +22,8 @@ public static class ServiceCollectionExtensions
                 SaslUsername = settings.SaslUsername,
                 SaslPassword = settings.SaslPassword,
                 
-                SecurityProtocol = SecurityProtocol.SaslSsl,
-                SaslMechanism = SaslMechanism.Plain,
+                SecurityProtocol = settings.SecurityProtocol ?? SecurityProtocol.Plaintext,
+                SaslMechanism = settings.SaslUsername != null ? SaslMechanism.Plain : null,
                 Acks = Acks.All,
             };
             
