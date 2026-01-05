@@ -19,11 +19,6 @@ public static class ServiceCollectionExtensions
             var producerConfig = new ProducerConfig
             {
                 BootstrapServers = settings.BootstrapServers,
-                SaslUsername = settings.SaslUsername,
-                SaslPassword = settings.SaslPassword,
-                
-                SecurityProtocol = settings.SecurityProtocol ?? SecurityProtocol.Plaintext,
-                SaslMechanism = settings.SaslUsername != null ? SaslMechanism.Plain : null,
                 Acks = Acks.All,
             };
             

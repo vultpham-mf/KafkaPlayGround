@@ -15,12 +15,10 @@ public class TriggerProducerApi
                     Key = Guid.NewGuid().ToString(),
                     Value = new Event
                     {
-                        Message = "Hello MotherFather! Test Produce Without Flush Hehe"
+                        Message = "Hello MotherFather!"
                     }
                 }
             );
-            
-            producer.Flush();
             
             return "Hello World!";
         });   
