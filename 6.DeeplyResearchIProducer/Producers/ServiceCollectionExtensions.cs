@@ -20,6 +20,11 @@ public static class ServiceCollectionExtensions
             {
                 BootstrapServers = settings.BootstrapServers,
                 Acks = Acks.All,
+                
+                // BatchNumMessages = 3,
+                // LingerMs = 100,
+                
+                // Partitioner = Partitioner.ConsistentRandom,
             };
             
             return new ProducerBuilder<string, Event>(producerConfig)

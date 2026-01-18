@@ -8,8 +8,11 @@ public class TriggerProducerApi
     {
         app.MapGet("trigger-producer", (IProducer<string, Event> producer) =>
         {
+            var topic = "topic_0";
+            var partition = 1;
+            
             producer.Produce(
-                "topic_0",
+                new TopicPartition(topic, partition),
                 new Message<string, Event>
                 {
                     Key = Guid.NewGuid().ToString(),
